@@ -1,0 +1,13 @@
+node_modules
+build
+dist
+npm-debug.log
+.DS_Store
+dist
+*.swp
+.idea
+.vscode
+package-lock.json
+*.log
+secrets.development.json
+*/.linaria_cache

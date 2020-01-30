@@ -1,0 +1,88 @@
+{
+  "name": "modules-architecture-application",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@types/classnames": "^2.2.9",
+    "@types/history": "^4.7.3",
+    "@types/jest": "^24.0.19",
+    "@types/node": "^12.11.1",
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
+    "@types/react-redux": "^7.1.5",
+    "@types/react-router-dom": "^5.1.0",
+    "@types/redux-actions": "^2.6.1",
+    "@types/redux-api-middleware": "^3.0.7",
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.9.0",
+    "axios": "^0.19.0",
+    "classnames": "^2.2.6",
+    "connected-react-router": "^6.5.2",
+    "core-js": "2.6.5",
+    "date-fns": "^2.2.1",
+    "date-fns-tz": "^1.0.8",
+    "history": "^4.10.0",
+    "linaria": "^1.3.1",
+    "platform": "^1.3.5",
+    "react-dropzone": "^10.2.1",
+    "react-hot-loader": "^4.12.13",
+    "react-redux": "^7.1.1",
+    "react-router": "^5.1.0",
+    "react-router-dom": "^5.1.0",
+    "react-scripts": "3.2.0",
+    "redux": "^4.0.4",
+    "redux-act": "^1.7.7",
+    "redux-actions": "^2.6.5",
+    "redux-axios-middleware": "^4.0.1",
+    "redux-saga": "^1.1.1",
+    "typescript": "^3.6.4"
+  },
+  "scripts": {
+    "start": "APP_CONFIG=local craco start",
+    "build:development": "APP_CONFIG=development craco build && cp -r build ./dist",
+    "build:staging": "APP_CONFIG=staging craco build && cp -r build ./dist",
+    "build:production": "APP_CONFIG=production craco build && cp -r build ./dist",
+    "build:newrelic": "APP_CONFIG=production craco build && node newrelic.js",
+    "test": "APP_CONFIG=development craco test",
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major",
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor",
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "resolutions": {
+    "eslint-loader": "3.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "globalSetup": "./jestGlobalSetup.js"
+  },
+  "devDependencies": {
+    "@craco/craco": "^5.4.0",
+    "@newrelic/publish-sourcemap": "^4.4.1",
+    "@testing-library/dom": "^6.8.1",
+    "@testing-library/jest-dom": "^4.1.2",
+    "@testing-library/react": "^9.3.0",
+    "@testing-library/user-event": "^7.1.2",
+    "autoprefixer": "^9.6.1",
+    "craco-interpolate-html-plugin": "^0.0.4",
+    "craco-linaria": "^1.1.1",
+    "node-sass": "^4.12.0",
+    "postcss": "^7.0.18",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-url": "^8.0.0"
+  }
+}
