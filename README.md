@@ -25,7 +25,7 @@ I started separating code by "domain" and tried to reduce code cohesion.
 
 ## Сoncept & patterns
 
-PAGES - argegetes (components + modules) linked on route, usually занимают full screen
+PAGES - argegetes (components + modules) linked on route, usually fill full screen
 
 MODULES - part of the application based on "domain"(for example: chat, auth), with api, ui, redux-state
 
